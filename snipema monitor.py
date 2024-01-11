@@ -1,8 +1,26 @@
-#I forgor to make it watch for changes in the website. i fix later
+from pathlib import Path
+import os
 import webbrowser
+import pyautogui
+import time
+import win32clipboard
 import urllib.request
 
-page = urllib.request.urlopen('Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
+siteloc = Path(__file__).with_name('YorkAuctionSite')
+website = Path(__file__).with_name('yorkAuctions.htm')
+print(website)
+os.chdir(siteloc)
+
+webbrowser.open('yorkAuctions.htm')
+time.sleep(5)
+pyautogui.hotkey('ctrl', 'l')
+pyautogui.hotkey('ctrl', 'c')
+pyautogui.hotkey('alt', 'f4')
+win32clipboard.OpenClipboard()
+data = win32clipboard.GetClipboardData()
+win32clipboard.CloseClipboard()
+
+page = urllib.request.urlopen(data)
 pageinfo = page.read()
 
 pagelen = len(pageinfo)
@@ -17,6 +35,6 @@ while check == 0:
     
     
         if phrase == trig:
-            webbrowser.open_new_tab('Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
+            webbrowser.open_new_tab(data)
             check += 1
 
