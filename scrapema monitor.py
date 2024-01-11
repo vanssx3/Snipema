@@ -1,3 +1,4 @@
+#I forgor to make it watch for changes in the website. i fix later
 import webbrowser
 import urllib.request
 
