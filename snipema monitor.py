@@ -2,7 +2,7 @@
 import webbrowser
 import urllib.request
 
-page = urllib.request.urlopen('file:///C:/Users/100038391/OneDrive%20-%20Clear%20Creek%20ISD/Desktop/Scrapema%20stuff/Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
+page = urllib.request.urlopen('Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
 pageinfo = page.read()
 
 pagelen = len(pageinfo)
@@ -17,7 +17,6 @@ while check == 0:
     
     
         if phrase == trig:
-            webbrowser.open_new_tab('file:///C:/Users/100038391/OneDrive%20-%20Clear%20Creek%20ISD/Desktop/Scrapema%20stuff/Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
+            webbrowser.open_new_tab('Scrapema-main/YorkAuctionSite/yorkAuctions.htm')
             check += 1
-
 
