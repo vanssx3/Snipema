@@ -3,7 +3,7 @@ import os
 import webbrowser
 import pyautogui
 import time
-import win32clipboard
+import pyperclip
 import urllib.request
 
 siteloc = Path(__file__).with_name('YorkAuctionSite')
@@ -16,9 +16,7 @@ time.sleep(5)
 pyautogui.hotkey('ctrl', 'l')
 pyautogui.hotkey('ctrl', 'c')
 pyautogui.hotkey('alt', 'esc')
-win32clipboard.OpenClipboard()
-data = win32clipboard.GetClipboardData()
-win32clipboard.CloseClipboard()
+data = pyperclip.paste()
 
 page = urllib.request.urlopen(data)
 pageinfo = page.read()
