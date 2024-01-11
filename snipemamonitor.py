@@ -1,4 +1,5 @@
 from pathlib import Path
+import pynput
 import os
 import webbrowser
 import pyautogui
@@ -12,7 +13,17 @@ print(website)
 os.chdir(siteloc)
 
 webbrowser.open('yorkAuctions.htm')
+
+mouse_listener = pynput.mouse.Listener(suppress=True)
+mouse_listener.start()
+keyboard_listener = pynput.keyboard.Listener(suppress=True)
+keyboard_listener.start()
+
 time.sleep(5)
+
+mouse_listener.stop()
+keyboard_listener.stop()
+
 pyautogui.hotkey('ctrl', 'l')
 pyautogui.hotkey('ctrl', 'c')
 pyautogui.hotkey('alt', 'esc')
