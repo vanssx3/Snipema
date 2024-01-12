@@ -39,6 +39,10 @@ triglen = len(trig)
 check = 0
 
 while check == 0:
+    page = urllib.request.urlopen(data)
+    pageinfo = page.read()
+
+    pagelen = len(pageinfo)
     for x in range(0, pagelen - triglen):
         phrase = pageinfo[x:x + triglen]
     
