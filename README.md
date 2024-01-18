@@ -2,6 +2,5 @@
 webma balls
 
 Dependencies: 
-pynput
-pyautogui
-pyperclip
+webbrowser
+urllib
