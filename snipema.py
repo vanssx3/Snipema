@@ -11,7 +11,7 @@ from colorama import Fore, Style
 web = 'https://vanssx3.github.io/Snipema/'
 os = platform.system()
 #sets trigger phrase and converts it into bytes
-trig = bytes('available', 'UTF-8')
+trig = bytes('<a href="accountPage.html">', 'UTF-8')
 
 #gets length of encoded trigger phrase
 triglen = len(trig)
@@ -80,19 +80,19 @@ while check == 0:
                     print(Style.RESET_ALL)
                 if os == 'Windows':
                     if arg1 == '-c':
-                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open(web)
+                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-f':
-                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open(web)
+                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-e':
-                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open(web)
+                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
                 if os == 'Linux':
                     if arg1 == '-c':
-                        webbrowser.get('/usr/bin/google-chrome').open(web)
+                        webbrowser.get('/usr/bin/google-chrome').open('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-f':
-                        webbrowser.get('/usr/bin/firefox').open(web)
+                        webbrowser.get('/usr/bin/firefox').open('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-e':
                         print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
             else:
-                webbrowser.open(web)  
+                webbrowser.open('https://vanssx3.github.io/Snipema/accountPage.html')  
             #makes the while-condition false 
             check += 1
