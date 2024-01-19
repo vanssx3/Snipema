@@ -4,6 +4,7 @@ import urllib.request
 import sys
 import platform
 import time
+from colorama import Fore, Style
 
 
 #storing website url
@@ -47,6 +48,10 @@ while check == 0:
 
             #opens url in new tab
             if extra == True:
+                if arg1 != 'c' and arg1 != '-f' and arg1 != 'e':
+                    print(Fore.LIGHTYELLOW_EX + "\nuse the proper command line arguments you dumb ape")
+                    print("[-c for Google Chrome | -f for Firefox | -e for Microsoft Edge]")
+                    print(Style.RESET_ALL)
                 if os == 'Windows':
                     if arg1 == '-c':
                         webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open(web)
@@ -64,7 +69,9 @@ while check == 0:
                         time.sleep(5)
                         webbrowser.get('/usr/bin/microsoft-edge-stable').open(web)
             else:
-                print('Welcome to Snipema.py')
-            
+                print(Fore.LIGHTYELLOW_EX + '\nWelcome to Snipema.py')
+                print("use 'python Snipema.py [ -c | -f | -e ]' to proceed")
+                print('')
+                print(Style.RESET_ALL)
             #makes the while-condition false 
             check += 1
