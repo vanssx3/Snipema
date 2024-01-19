@@ -37,6 +37,8 @@ if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' or arg1 == " ":
     browser = 'unspecified browser'
 
 print('\nwhen item is available, open website on ' + browser + ' for ' + os)
+if(os == "Linux"):
+    print("\nMake sure to use an X11 Desktop instead of Wayland for proper results")
 print("\nPress [Enter] to confirm or [esc] to cancel")
 
 while (True):
