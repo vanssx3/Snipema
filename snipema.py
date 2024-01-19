@@ -16,7 +16,7 @@ extra = False
 #stores initial value for while-loop condition
 check = 0
 args = len(sys.argv)
-print(args)
+
 if args > 1:
     arg1 = sys.argv[1]
     
