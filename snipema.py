@@ -3,6 +3,7 @@ import webbrowser
 import urllib.request
 import sys
 import platform
+import time
 
 
 #storing website url
@@ -50,7 +51,7 @@ while check == 0:
                     if arg1 == '-c':
                         webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open(web)
                     if arg1 == '-f':
-                        print('not available yet. cry.')
+                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open(web)
                     if arg1 == '-e':
                         webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open(web)
                 if os == 'Linux':
@@ -59,7 +60,9 @@ while check == 0:
                     if arg1 == '-f':
                         webbrowser.get('/usr/bin/firefox').open(web)
                     if arg1 == '-e':
-                        webbrowser.get('/usr/bin/microsoft-edge-stable')
+                        print("why are you using edge on Linux???")
+                        time.sleep(5)
+                        webbrowser.get('/usr/bin/microsoft-edge-stable').open(web)
             else:
                 print('Welcome to Snipema.py')
             
