@@ -90,7 +90,7 @@ while check == 0:
                     if arg1 == '-f':
                         webbrowser.get('/usr/bin/firefox').open(web)
                     if arg1 == '-e':
-                        print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
+                        print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'*")
             else:
                 webbrowser.open(web)  
             #makes the while-condition false 
