@@ -2,11 +2,12 @@
 import webbrowser
 import urllib.request
 import sys
+import platform
 
 
 #storing website url
 web = 'https://vanssx3.github.io/Snipema/'
-
+os = platform.system()
 #sets trigger phrase and converts it into bytes
 trig = bytes('">BUY NOW!!</button', 'UTF-8')
 
@@ -19,10 +20,7 @@ args = len(sys.argv)
 
 if args > 1:
     arg1 = sys.argv[1]
-    
-    if args > 2:
-        arg2 = sys.argv[2]
-        extra = True
+    extra = True
 else:
     arg1 = " "
 #initializes while-loop 
@@ -48,16 +46,20 @@ while check == 0:
 
             #opens url in new tab
             if extra == True:
-                if arg1 == '-w':
-                    if arg2 == '-c':
+                if os == 'Windows':
+                    if arg1 == '-c':
                         webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open(web)
-                    if arg2 == '-e':
+                    if arg1 == '-f':
+                        print('not available yet. cry.')
+                    if arg1 == '-e':
                         webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open(web)
-                if arg1 == '-l':
-                    if arg2 == '-c':
+                if os == 'Linux':
+                    if arg1 == '-c':
                         webbrowser.get('/usr/bin/google-chrome').open(web)
-                    if arg2 == '-f':
+                    if arg1 == '-f':
                         webbrowser.get('/usr/bin/firefox').open(web)
+                    if arg1 == '-e':
+                        webbrowser.get('/usr/bin/microsoft-edge-stable')
             else:
                 print('Welcome to Snipema.py')
             
