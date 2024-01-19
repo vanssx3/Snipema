@@ -4,7 +4,7 @@ import urllib.request
 import sys
 import platform
 from colorama import Fore, Style
-import keyboard
+
 
 
 #storing website url
@@ -39,18 +39,17 @@ if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' or arg1 == " ":
 print('\nwhen item is available, open website on ' + browser + ' for ' + os)
 if(os == "Linux"):
     print("\nMake sure to use an X11 Desktop instead of Wayland for proper results")
-print("\nPress [Enter] to confirm or [esc] to cancel")
+print("\nPress [y] to confirm or [n] to cancel")
 
 while (True):
-    if keyboard.is_pressed('ENTER'):
-        print(Style.RESET_ALL)
+    value = input()
+    if value == 'n':
+            print(Style.RESET_ALL)
+            sys.exit("program terminated")
+    if value == 'y':
         break
         
-    if keyboard.is_pressed('esc'):
-        print(Style.RESET_ALL)
-        sys.exit("program terminated")
-        
-
+print(Style.RESET_ALL)
 
 #initializes while-loop 
 while check == 0:
