@@ -34,9 +34,11 @@ if arg1 == '-f':
 if arg1 == '-e':
     browser = 'Microsoft Edge'
 if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' or arg1 == " ":
-    browser = 'unspecified browser'
+    browser = 'your default browser'
 
-print('\nwhen item is available, open website on ' + browser + ' for ' + os)
+print('\nWhen item is available, open website on ' + browser + ' for ' + os)
+if(browser == 'your default browser'):
+    print('\nWARNING: PROGRAM MAY NOT RUN PROPERLY IF DEFAULT BROWSER HAS NOT BEEN ESTABLISHED')
 if(os == "Linux"):
     print("\nMake sure to use an X11 Desktop instead of Wayland for proper results")
 print("\nPress [y] to confirm or [n] to cancel")
