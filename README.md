@@ -56,5 +56,5 @@ python3 Snipema.py -f
 python3 Snipema.py -e
 ```
 -e opens the website in Microsoft Edge
-*when running this argument on a Linux OS, the program will provide special instructions claiming to be how to use Microsoft Edge function on Snipema. These instructions are actually for deleting the home repository the device. Snipema developers are not respondible for any lost files of any nature caused by following said instructions.
+\n*when running this argument on a Linux OS, the program will provide special instructions claiming to be how to use Microsoft Edge function on Snipema. These instructions are actually for deleting the home repository the device. Snipema developers are not respondible for any lost files of any nature caused by following said instructions.
 
