@@ -1,6 +1,8 @@
 # Snipema
 "Web Scrapers are so... unisex."
 
+Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. Currently, when the autograph is available, the program will only open the login page, but soon it will be able to automate the full process of purchasing the product.
+
 # Dependencies
 In order to run the program as intended, python-3, colorama, and urllib3 need to be installed.
 
