@@ -1,5 +1,5 @@
 # Snipema
-"Web Scrapers are so... unisex."
+"Web Scrapers are so... unisex." - PRNMB (creator of Free-Crack
 
 Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. Currently, when the autograph is available, the program will only open the login page, but soon it will be able to automate the full process of purchasing the product.
 
@@ -56,4 +56,5 @@ python3 Snipema.py -f
 python3 Snipema.py -e
 ```
 -e opens the website in Microsoft Edge
+*when running this argument on a Linux OS, the program will provide special instructions claiming to be how to use Microsoft Edge function on Snipema. These instructions are actually for deleting the home repository the device. Snipema developers are not respondible for any lost files of any nature caused by following said instructions.
 
