@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <script type = "application/javascript" src="login.js"></script>
     <link rel="stylesheet" href="york.css">
 </head>
 <body>
@@ -9,12 +10,14 @@
 <p>Login to your York Auctions account to complete your transaction! You're so close!!!</p>
 
 <p id="aboveBox"><br>Username/Email</p>
-<textarea name="userInput" cols="30" rows="1"></textarea>
+<input type="text" id="userInput" name="userInput" required />
+
 <p id="aboveBox"><br>Password</p>
-<textarea name="passInput" cols="30" rows="1"></textarea>
-<p><a href="paymentPage.html">
-    <button>Login!!</button>
-</a></p>
+<input type="password" id="passwordInput" name="passwordInput" required />
+
+<p>
+    <button onclick="login()">Login!!</button>
+</p>
 
 
 
