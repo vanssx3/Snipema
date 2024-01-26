@@ -6,7 +6,7 @@ Snipema is a functioning webscraper tool that, while running, watches https://va
 Snipema is currently compatible with Windows and (maybe) Linux operating systems.
 
 # Dependencies
-In order to run the program as intended, python-3, colorama, and urllib3 need to be installed.
+In order to run the program as intended, python-3, colorama, pyautogui, and urllib3 need to be installed.
 
 # Python-3 Installation
 
@@ -33,6 +33,10 @@ pip install colorama
 # urllib3 Installation
 ```sh
 pip install urllib3
+```
+# pyautogui Installation
+```sh
+pip install pyautogui
 ```
 # Commands and arguments
 Start command:
