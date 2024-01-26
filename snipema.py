@@ -37,8 +37,10 @@ if arg1 == '-f':
     browser = 'Firefox'
 if arg1 == '-e':
     browser = 'Microsoft Edge'
-if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' or arg1 == " ":
+if arg1 == " ":
     browser = 'your default browser'
+if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' and arg1 != " ":
+    browser = '[Invalid Argument]'
 
 print('\nWhen item is available, open website on ' + browser + ' for ' + os)
 if(browser == 'your default browser'):
@@ -87,7 +89,7 @@ while check == 0:
                     print(Fore.LIGHTYELLOW_EX + "\nuse the proper command line arguments you dumb ape")
                     print("[-c for Google Chrome | -f for Firefox | -e for Microsoft Edge]")
                     print(Style.RESET_ALL)
-                    break
+                    sys.exit("")
                 if os == 'Windows':
                     if arg1 == '-c':
                         webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
@@ -110,16 +112,16 @@ while check == 0:
 uInput = list(username)
 pInput = list(password) 
 
-
-time.sleep(3)
-pyautogui.hotkey("f11")
-pyautogui.hotkey('tab')
-pyautogui.hotkey('enter')
-for x in range (len(uInput)):
-    pyautogui.hotkey(uInput[x])
-pyautogui.hotkey('tab')
-pyautogui.hotkey('enter')
-for x in range (len(pInput)):
-    pyautogui.hotkey(pInput[x])
-pyautogui.hotkey('tab')
-pyautogui.hotkey('enter')
+if check > 0:
+    time.sleep(3)
+    pyautogui.hotkey("f11")
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    for x in range (len(uInput)):
+        pyautogui.hotkey(uInput[x])
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    for x in range (len(pInput)):
+        pyautogui.hotkey(pInput[x])
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
