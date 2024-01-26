@@ -6,18 +6,10 @@ import platform
 from colorama import Fore, Style
 import pyautogui
 import time
-from screeninfo import get_monitors
 
-wLoc = 0.0146
-hLoc = 0.3906
-phLoc = 0.5208
-uWidth = 0
-uHeight = 0
-pHeight = 0
-for m in get_monitors():
-    uWidth = (m.width) * wLoc
-    uHeight =(m.height) * hLoc
-    pHeight = (m.height) * phLoc
+
+
+
 
 #storing website url
 web = 'https://vanssx3.github.io/Snipema/'
@@ -98,19 +90,19 @@ while check == 0:
                     break
                 if os == 'Windows':
                     if arg1 == '-c':
-                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-f':
-                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-e':
-                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
                 if os == 'Linux':
                     if arg1 == '-c':
-                        webbrowser.get('/usr/bin/google-chrome').open('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('/usr/bin/google-chrome').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-f':
-                        webbrowser.get('/usr/bin/firefox').open('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('/usr/bin/firefox').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-e':
                         print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
-                        break
+                        sys.exit("kys")
             else:
                 webbrowser.open('https://vanssx3.github.io/Snipema/accountPage.html')  
             #makes the while-condition false 
@@ -118,15 +110,16 @@ while check == 0:
 uInput = list(username)
 pInput = list(password) 
 
-pyautogui.moveTo(uWidth, uHeight)
+
 time.sleep(3)
 pyautogui.hotkey("f11")
-pyautogui.leftClick()
+pyautogui.hotkey('tab')
+pyautogui.hotkey('enter')
 for x in range (len(uInput)):
     pyautogui.hotkey(uInput[x])
-pyautogui.moveTo(uWidth,pHeight)
-pyautogui.leftClick()
+pyautogui.hotkey('tab')
+pyautogui.hotkey('enter')
 for x in range (len(pInput)):
     pyautogui.hotkey(pInput[x])
-pyautogui.moveTo(uWidth + 10, pHeight + 50)
-pyautogui.leftClick()
+pyautogui.hotkey('tab')
+pyautogui.hotkey('enter')
