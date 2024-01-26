@@ -30,7 +30,6 @@ if args > 1:
 else:
     arg1 = " "
 print(Fore.LIGHTYELLOW_EX + '\nWelcome to Snipema.py')
-print('"Snipema is so... unisex..." - PRNMB (Free-Crack Lead Developer)')
 
 if arg1 == '-c':
     browser = 'Google Chrome'
