@@ -4,8 +4,20 @@ import urllib.request
 import sys
 import platform
 from colorama import Fore, Style
+import pyautogui
+import time
+from screeninfo import get_monitors
 
-
+wLoc = 0.0146
+hLoc = 0.3906
+phLoc = 0.5208
+uWidth = 0
+uHeight = 0
+pHeight = 0
+for m in get_monitors():
+    uWidth = (m.width) * wLoc
+    uHeight =(m.height) * hLoc
+    pHeight = (m.height) * phLoc
 
 #storing website url
 web = 'https://vanssx3.github.io/Snipema/'
@@ -50,7 +62,10 @@ while (True):
             sys.exit("program terminated")
     if value == 'y':
         break
-        
+print("\nInput your yorkauctions username")
+username = input()
+print("\nInput your yorkauctions password")
+password = input()
 print(Style.RESET_ALL)
 
 #initializes while-loop 
@@ -76,10 +91,11 @@ while check == 0:
 
             #opens url in new tab
             if extra == True:
-                if arg1 != 'c' and arg1 != '-f' and arg1 != '-e':
+                if arg1 != '-c' and arg1 != '-f' and arg1 != '-e':
                     print(Fore.LIGHTYELLOW_EX + "\nuse the proper command line arguments you dumb ape")
                     print("[-c for Google Chrome | -f for Firefox | -e for Microsoft Edge]")
                     print(Style.RESET_ALL)
+                    break
                 if os == 'Windows':
                     if arg1 == '-c':
                         webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open('https://vanssx3.github.io/Snipema/accountPage.html')
@@ -94,7 +110,23 @@ while check == 0:
                         webbrowser.get('/usr/bin/firefox').open('https://vanssx3.github.io/Snipema/accountPage.html')
                     if arg1 == '-e':
                         print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
+                        break
             else:
                 webbrowser.open('https://vanssx3.github.io/Snipema/accountPage.html')  
             #makes the while-condition false 
             check += 1
+uInput = list(username)
+pInput = list(password) 
+
+pyautogui.moveTo(uWidth, uHeight)
+time.sleep(3)
+pyautogui.hotkey("f11")
+pyautogui.leftClick()
+for x in range (len(uInput)):
+    pyautogui.hotkey(uInput[x])
+pyautogui.moveTo(uWidth,pHeight)
+pyautogui.leftClick()
+for x in range (len(pInput)):
+    pyautogui.hotkey(pInput[x])
+pyautogui.moveTo(uWidth + 10, pHeight + 50)
+pyautogui.leftClick()
