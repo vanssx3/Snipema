@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <script type = "application/javascript" src="login.js"></script>
+    <script src = "login.js"></script>
     <link rel="stylesheet" href="york.css">
 </head>
 <body>
@@ -13,10 +13,11 @@
 <input type="text" id="userInput" name="userInput" required />
 
 <p id="aboveBox"><br>Password</p>
-<input type="password" id="passwordInput" name="passwordInput" required />
+<input type="text" id="passwordInput" name="passwordInput" required />
+<p id="incorrectText" name="incorrectText"></p>
 
 <p>
-    <button onclick="login()">Login!!</button>
+    <button onclick="loginButton()">Login!!</button>
 </p>
 
 
