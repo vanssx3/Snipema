@@ -20,6 +20,11 @@ p {
   font-family: sans-serif;
 }
 
+#incorrectText {
+  font-size: 100%;
+  color: red;
+}
+
 button {
   border: 3px solid #BB0000;
   color: black;
