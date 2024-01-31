@@ -60,8 +60,13 @@ print("\nInput your yorkauctions username")
 username = input()
 print("\nInput your yorkauctions password")
 password = input()
+print("\nInput your credit card number")
+crednumb = input()
+print('\nInput your card experation date ("mm/dd/yyyy")')
+credexp = input()
+print("\nInput your card CVV")
+cvv = input()
 print(Style.RESET_ALL)
-
 #initializes while-loop 
 while check == 0:
     
@@ -110,7 +115,10 @@ while check == 0:
             #makes the while-condition false 
             check += 1
 uInput = list(username)
-pInput = list(password) 
+pInput = list(password)
+credInput = list(crednumb)
+exInput = list(credexp)
+cvInput = list(cvv) 
 
 if check > 0:
     time.sleep(3)
@@ -123,5 +131,21 @@ if check > 0:
     pyautogui.hotkey('enter')
     for x in range (len(pInput)):
         pyautogui.hotkey(pInput[x])
+    pyautogui.hotkey('tab')
+    pyautogui.keyDown('enter')
+    pyautogui.keyUp('enter')
+    time.sleep(3)
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    for x in range (len(credInput)):
+        pyautogui.hotkey(credInput[x])
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    for x in range (len(exInput)):
+        pyautogui.hotkey(exInput[x])
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    for x in range (len(cvInput)):
+        pyautogui.hotkey(cvInput[x])
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
