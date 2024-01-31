@@ -62,7 +62,7 @@ print("\nInput your yorkauctions password")
 password = input()
 print("\nInput your credit card number")
 crednumb = input()
-print('\nInput your card experation date (mmddyyyy)')
+print('\nInput your card experation date ("mmddyyyy")')
 credexp = input()
 print("\nInput your card CVV")
 cvv = input()
@@ -97,21 +97,21 @@ while check == 0:
                     sys.exit("")
                 if os == 'Windows':
                     if arg1 == '-c':
-                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files/Google/Chrome/Application/chrome.exe" %s').open_new_tab(web)
                     if arg1 == '-f':
-                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files/Mozilla Firefox/Firefox.exe" %s').open_new_tab(web)
                     if arg1 == '-e':
-                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open_new_tab(web)
                 if os == 'Linux':
                     if arg1 == '-c':
-                        webbrowser.get('/usr/bin/google-chrome').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('/usr/bin/google-chrome').open_new_tab(web)
                     if arg1 == '-f':
-                        webbrowser.get('/usr/bin/firefox').open_new_tab('https://vanssx3.github.io/Snipema/accountPage.html')
+                        webbrowser.get('/usr/bin/firefox').open_new_tab(web)
                     if arg1 == '-e':
                         print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
                         sys.exit("kys")
             else:
-                webbrowser.open('https://vanssx3.github.io/Snipema/accountPage.html')  
+                webbrowser.open(web)  
             #makes the while-condition false 
             check += 1
 uInput = list(username)
@@ -123,6 +123,9 @@ cvInput = list(cvv)
 if check > 0:
     time.sleep(3)
     pyautogui.hotkey("f11")
+    pyautogui.hotkey('tab')
+    pyautogui.hotkey('enter')
+    time.sleep(2)
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
     for x in range (len(uInput)):
