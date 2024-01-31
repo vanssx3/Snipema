@@ -2,6 +2,7 @@
 <html lang="en-US">
 <head>
     <link rel="stylesheet" href="york.css">
+    <script src = "login.js"></script>
 </head>
 <body>
 
@@ -11,15 +12,19 @@
 <p id="aboveBox">Card Number<br></p>
 <input type="text" id="cardNumber" name="cardNumber" required />
 
-<p id="aboveBox">Expirey Date⠀⠀⠀⠀⠀CVV<br></p>
+<p id="aboveBox">Expirey Date⠀⠀CVV<br></p>
 <p>
-    <input type="text" id="expireyDate" name="expireyDate" required />
+    <input type="date" id="expireyDate" name="expireyDate" required />
     <input type="text" id="cvv" name="cvv" required />
 </p>
-
+<p id="incorrectText" name="incorrectText"></p>
 <p>
     <button onclick="checkPayment()">BUY!!!!!</button>
 </p>
+
+
+
+<p id="bottomText">Copyright York Industries 2024. No Refunds!</p>
 
 </body>
 </html>
