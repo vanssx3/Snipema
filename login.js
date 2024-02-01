@@ -1,3 +1,4 @@
+// accountPage button function
 function loginButton() {
     //User login variables
     var user = document.getElementById("userInput").value;
@@ -42,6 +43,7 @@ function loginButton() {
     login();
 }
 
+// paymentPage button function
 function checkPayment() {
     // List of numbers to check if the credit card number has only numbers
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
