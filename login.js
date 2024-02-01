@@ -52,47 +52,77 @@ function checkPayment() {
     var cvvNumber = document.getElementById("cvv").value;
     var hasFailed = 0;
 
-    function checkCardNumber(){
-        for(let i = 0; i < cardNumber.length; i++) {
-            if(cardNumber.length != (16)){
+    function checkCardNumber() {
+        if(cardNumber.length != (16)){
+            if(cardNumber.length != (15)){
+                console.log("length error");
                 hasFailed = 1;
                 error(1);
             }
-            if(cardNumber[i] != ("1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0")) {
-                hasFailed = 1;
-                error(1);
+        }
+        for(let i = 0; i < cardNumber.length; i++) {
+            let fails = 0;
+            for(let j = 0; j < numbers.length; j++) {
+                if(cardNumber.charAt(i) == numbers[j]){
+                    fails++;
+                }
+                if(fails == 10) {
+                    console.log("number error");
+                    hasFailed = 1;
+                    error(1);
+                }
             }
         }
         if(hasFailed == 0){
             checkDate();
         }
-    }  
+    }
 
     function checkDate() {
         //Expirey date values
         var expYear = Math.floor(dateNumber.substr(0, 4));
         var expMonth = Math.floor(dateNumber.substr(5, 2));
-        var expDay = Math.floor(dateNumber.substr(8, 2));
 
         //Current date values
         const date = new Date();
         let curYear = date.getFullYear();
         let curMonth = date.getMonth() + 1;
-        let curDay = date.getDate();
 
         if(curYear > expYear) {
+            console.log("failed year");
             hasFailed = 1;
             error(2);
-        } else if((curYear = expYear) && (curMonth > expMonth)) {
+        } else if((curYear == expYear) && (curMonth > expMonth)) {
+            console.log("failed month");
             hasFailed = 1;
             error(2);
+        } else if(hasFailed == 0) {
+            checkCVV();
         }
     }   
 
     function checkCVV() {
-        if(cvvNumber.length != (3 || 4)){
+        if(cvvNumber.length != (3 || 4)) {
+            console.log("failed cvv length");
             hasFailed = 1;
-            error(3)
+            error(3);
+        } else if(cvvNumber.length == 3) {
+            if(cardNumber.length != 16) {
+                console.log("cvv doesnt match number1")
+                hasFailed = 1;
+                error(3);
+            }
+        } else if(cvvNumber.length == 4) {
+            if(cardNumber.length != 15) {
+                console.log("cvv doesnt match number2")
+                hasFailed = 1;
+                error(3);
+            }
+        }
+        console.log(hasFailed);
+        if(hasFailed == 0) {
+            console.log("success :3");
+            window.location.href = "successPage.html";
         }
     }
 
