@@ -30,7 +30,7 @@ if args > 1:
 else:
     arg1 = " "
 print(Fore.LIGHTYELLOW_EX + '\nWelcome to Snipema.py')
-
+# Sets browser variable according to the user argument. If the user is an ape that can't check valid arguments, there may or may not be a malware trigger to promptly solve that problem
 if arg1 == '-c':
     browser = 'Google Chrome'
 if arg1 == '-f':
@@ -41,14 +41,14 @@ if arg1 == " ":
     browser = 'your default browser'
 if arg1 != '-c' and arg1 != '-f' and arg1 != '-e' and arg1 != " ":
     browser = '[Invalid Argument]'
-
+# Confirms the browser and os is correct
 print('\nWhen item is available, open website on ' + browser + ' for ' + os)
 if(browser == 'your default browser'):
     print('\nWARNING: PROGRAM MAY NOT RUN PROPERLY IF DEFAULT BROWSER HAS NOT BEEN ESTABLISHED')
 if(os == "Linux"):
     print("\nMake sure to use an X11 Desktop instead of Wayland for proper results")
 print("\nPress [y] to confirm or [n] to cancel")
-
+# if schtuff's good, program proceeds. if shtuff ain't good, program commits self termination
 while (True):
     value = input()
     if value == 'n':
@@ -56,6 +56,7 @@ while (True):
             sys.exit("program terminated")
     if value == 'y':
         break
+# asks for personal information (definitely doesn't steal it)
 print("\nInput your yorkauctions username")
 username = input()
 print("\nInput your yorkauctions password")
@@ -109,18 +110,21 @@ while check == 0:
                         webbrowser.get('/usr/bin/firefox').open_new_tab(web)
                     if arg1 == '-e':
                         print("to use edge, execute 'chmod 755 epicCrack.sh', then execute './epicCrack.sh'")
-                        sys.exit("kys")
+                        sys.exit("consider using Firefox")
             else:
                 webbrowser.open(web)  
             #makes the while-condition false 
             check += 1
+#creates array containing individual characters of previously provided info
 uInput = list(username)
 pInput = list(password)
 credInput = list(crednumb)
 exInput = list(credexp)
 cvInput = list(cvv) 
 
+#checks if while loop was properly terminated
 if check > 0:
+    #automates the process of opening the page, signing in, and buying the product
     time.sleep(3)
     pyautogui.hotkey("f11")
     pyautogui.hotkey('tab')
