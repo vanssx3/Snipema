@@ -105,7 +105,7 @@ while check == 0:
                         webbrowser.get('"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" %s').open_new_tab(web)
                 if os == 'Linux':
                     if arg1 == '-c':
-                        webbrowser.get('/usr/bin/google-chrome').open_new_tab(web)
+                        webbrowser.get('/usr/bin/google-chrome-stable').open_new_tab(web)
                     if arg1 == '-f':
                         webbrowser.get('/usr/bin/firefox').open_new_tab(web)
                     if arg1 == '-e':
@@ -125,11 +125,11 @@ cvInput = list(cvv)
 #checks if while loop was properly terminated
 if check > 0:
     #automates the process of opening the page, signing in, and buying the product
-    time.sleep(3)
+    time.sleep(2)
     pyautogui.hotkey("f11")
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
-    time.sleep(2)
+    time.sleep(1)
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
     for x in range (len(uInput)):
@@ -141,7 +141,7 @@ if check > 0:
     pyautogui.hotkey('tab')
     pyautogui.keyDown('enter')
     pyautogui.keyUp('enter')
-    time.sleep(3)
+    time.sleep(1)
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
     for x in range (len(credInput)):
