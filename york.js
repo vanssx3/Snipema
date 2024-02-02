@@ -3,7 +3,9 @@ var time = 10;
 
 
 function timer(){
-    // Not yet implemented
+    document.cookie = "timer="+time;
+    let t = getCookier("timer");
+    
 }
 
 function loginButton() {
