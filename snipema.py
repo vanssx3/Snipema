@@ -139,6 +139,7 @@ if check > 0:
     for x in range (len(pInput)):
         pyautogui.hotkey(pInput[x])
     pyautogui.hotkey('tab')
+    pyautogui.hotkey('tab')
     pyautogui.keyDown('enter')
     pyautogui.keyUp('enter')
     time.sleep(1)
@@ -150,6 +151,8 @@ if check > 0:
     pyautogui.hotkey('enter')
     for x in range (len(exInput)):
         pyautogui.hotkey(exInput[x])
+    if browser  == 'Firefox':
+        pyautogui.hotkey('tab')
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
     for x in range (len(cvInput)):
