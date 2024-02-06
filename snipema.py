@@ -61,11 +61,11 @@ print("\nInput your yorkauctions username")
 username = input()
 print("\nInput your yorkauctions password")
 password = input()
-print("\nInput your credit card number (WILL NOT BE SAVED!)")
+print("\nInput your credit card number")
 crednumb = input()
-print('\nInput your card experation date ("mmddyyyy") (Again, WONT BE SAVED!)')
+print('\nInput your card experation date ("mmddyyyy")')
 credexp = input()
-print("\nInput your card CVV (trust me bro)")
+print("\nInput your card CVV")
 cvv = input()
 print(Style.RESET_ALL)
 #initializes while-loop 
@@ -132,10 +132,12 @@ if check > 0:
     time.sleep(1)
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
+    # Inputs each character in stored username 
     for x in range (len(uInput)):
         pyautogui.hotkey(uInput[x])
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
+    # Inputs each character in stored password
     for x in range (len(pInput)):
         pyautogui.hotkey(pInput[x])
     pyautogui.hotkey('tab')
@@ -145,16 +147,20 @@ if check > 0:
     time.sleep(1)
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
+    # Inputs each number in stored credit card number
     for x in range (len(credInput)):
         pyautogui.hotkey(credInput[x])
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
+    # Inputs each number in stored experation date 
     for x in range (len(exInput)):
         pyautogui.hotkey(exInput[x])
+    # Firefox has a built in calendar button so an extra tab is necessary
     if browser  == 'Firefox':
         pyautogui.hotkey('tab')
     pyautogui.hotkey('tab')
     pyautogui.hotkey('enter')
+    # Inputs those funny 3 numbers on your credit card
     for x in range (len(cvInput)):
         pyautogui.hotkey(cvInput[x])
     pyautogui.hotkey('tab')
