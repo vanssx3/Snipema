@@ -1,12 +1,23 @@
-var startTime = 5;
-var time = 10;
+const startTime = 5;
+const time = 10;
+
+function startTimer() {
+    document.cookie = ("timer="+ time);
+}
 
 
-function timer(){
-    document.cookie = "timer="+time;
-    let t = getCookier("timer");
+function passTime() {
+    let curTime = Math.floor(getCookie("timer"));
+    setInterval(passTime2, 100);
+
+    function passTime2() {
+        curTime = (curTime - 0.100);
+        document.cookie = ("timer=" + curTime);
+    }
     
 }
+
+
 function loginButton() {
     //User login variables
     var user = document.getElementById("userInput").value;
