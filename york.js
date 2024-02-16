@@ -1,10 +1,19 @@
+//Time vars
 const startTime = 5;
 const time = 10;
 
+//Makes a new cookie with an impossible time
+function establishTimer() {
+    document.cookie = ("timer="+ (time + 1));
+}
+
+
+//Starts a timer cookie when accountPage loads
 function startTimer() {
     document.cookie = ("timer="+ time);
 }
 
+//?? prn myb please add comments to this
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -21,6 +30,7 @@ function getCookie(cname) {
   return "";
 }
 
+//Every 100 ms the time cookie will be updated to reflect the time passing
 function passTime() {
     let curTime = Math.floor(getCookie("timer"));
     setInterval(passTime2, 100);
@@ -32,7 +42,7 @@ function passTime() {
     
 }
 
-
+//Login button for accountPage
 function loginButton() {
     //User login variables
     var user = document.getElementById("userInput").value;
@@ -178,4 +188,25 @@ function checkPayment() {
 //Account creation page back button
 function backButton() {
     window.location.href = "accountPage.html";
+}
+
+//Determine if the user successfully purchased the autograph or not
+function judge() {
+    let curTime = Math.floor(getCookie("timer"));
+    if(curTime > time){
+        // Activates if the cookie has an invalid time, achieved by skipping to successPage.html
+        console.log("cheater");
+        document.getElementById("outcome").innerHTML = "Something's not right!";
+        document.getElementById("funnyloltext").innerHTML = "No autographs for you buddy!";
+    } else if(curTime < 0){
+        //Activates if the time cookie runs too low (noob)
+        console.log("noob");
+        document.getElementById("outcome").innerHTML = "Purchase failed, item is now out of stock";
+        document.getElementById("funnyloltext").innerHTML = "Mald at the cool item you missed out on below";
+    } else{
+        //Activates if the time cookie is in the acceptable time range (pro)
+        console.log("ggwp");
+        document.getElementById("outcome").innerHTML = "You got the autograph!!!";
+        document.getElementById("funnyloltext").innerHTML = "Shipping time: Eventually... (No refunds!)";
+    }
 }
