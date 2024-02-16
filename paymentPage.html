@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Payment Details - York Auctions</title>
-    <link rel="stylesheet" href="york.css">
+    <title>Create an Account - York Auctions</title>
     <script src = "york.js"></script>
+    <link rel="stylesheet" href="york.css">
     <link rel="icon" type="image/x-icon" href="faviconyork.png">
 </head>
-<body>
+<body onload="passTime()"></body>>
 
 <h1 style="color:red;" style="text-align:center;">MR YORK AUTOGRAPH SALE</h1>
-<p>Check out before it's too late! Enter your payment details to finish payment!</p>
 
-<p id="aboveBox">Card Number<br></p>
-<input type="text" id="cardNumber" name="cardNumber" required />
-
-<p id="aboveBox">Expirey Date⠀⠀CVV<br></p>
+<p>Account Creation is not available at this time due to overwhelming server traffic. We apologize for the inconvenience.</p>
+<p>If you already have an account, please use that to login in the meantime.</p>
 <p>
-    <input type="date" id="expireyDate" name="expireyDate" required />
-    <input type="text" id="cvv" name="cvv" required />
+    <button onclick="backButton()">Go Back</button>
 </p>
-<p id="incorrectText" name="incorrectText"></p>
-<p>
-    <button onclick="checkPayment()">BUY!!!!!</button>
-</p>
-
 
 <p id="bottomText">By continuing to use this website, you consent to the use of cookies.</p>
 <p id="bottomText">Copyright York Industries 2024. No Refunds!</p>
