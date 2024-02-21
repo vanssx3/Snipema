@@ -15,12 +15,12 @@ For Windows Users, download it here: https://www.python.org/downloads/windows/
 
 For MacOS Users, download it here: https://www.python.org/downloads/macos/
 
-For Ubuntu/Debian based Linux Distros, run
+For Ubuntu🤢/Debian based Linux Distros, run
 ```sh
 sudo apt-get install python3
 ```
 
-For Arch based Linux Distros, run
+For Arch😎 based Linux Distros, run
 ```sh
 sudo pacman -S python3
 ```
