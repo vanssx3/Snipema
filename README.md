@@ -1,7 +1,7 @@
 # Snipema
 "Web Scrapers are so... unisex." - PRNMB (creator of Free-Crack)
 
-Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. Currently, when the autograph is available, the program will only open the login page, fill out the username andd password textboxes, and click the login, but soon it will be able to automate the full process of purchasing the product.
+Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. When the autograph is available/when the program is run, the website will be opened and all of your information will be input as fast as possible to guaruntee that you get your autograph.
 
 Snipema is currently compatible with Windows and Linux operating systems, one of the staples of the "Ma Trifecta."
 (For Linux, make sure your desktop is running on X11 and not Wayland!)
