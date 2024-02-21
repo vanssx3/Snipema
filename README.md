@@ -3,8 +3,9 @@
 
 Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. When the autograph is available/when the program is run, the website will be opened and all of your information will be input as fast as possible to guaruntee that you get your autograph.
 
-Snipema is currently compatible with Windows and Linux operating systems, one of the staples of the "Ma Trifecta."
+Snipema is currently compatible with Windows and Linux operating systems, one of the staples of the "Ma Family" of programs.
 (For Linux, make sure your desktop is running on X11 and not Wayland!)
+Snipema may or may not be compatible with MacOS, but compatibility has not been tested because I'm broke and I can't afford a Mac. Sorry.
 
 # Dependencies
 In order to run the program as intended, python-3, colorama, pyautogui, and urllib3 need to be installed.
