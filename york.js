@@ -51,9 +51,9 @@ function loginButton() {
 
 
     //Users that can be logged into (too lazy to use php :p)
-    const users = ["Yorkiplier", "slimjimgod", "mrVampork96"];
-    const emails = ["theyorker@gmail.com", "davidavid@gmail.com", "therealvampork@vampire.com"];
-    const passwords = ["H3110everyone", "cant.teleport", "ColdRoom123"];
+    const users = ["Yorkiplier", "slimjimgod", "mrVampork96", "1337H4kr"];
+    const emails = ["theyorker@gmail.com", "davidavid@gmail.com", "therealvampork@vampire.com", "a55crackers@tor.net"];
+    const passwords = ["H3110everyone", "cant.teleport", "ColdRoom123", "archuserbtw"];
 
 
     function loginUser() {
