@@ -1,5 +1,4 @@
 //Time vars
-const startTime = 5;
 const time = 10;
 
 //Makes a new cookie with an impossible time
@@ -55,7 +54,8 @@ function loginButton() {
     const emails = ["theyorker@gmail.com", "davidavid@gmail.com", "therealvampork@vampire.com", "a55crackers@tor.net"];
     const passwords = ["H3110everyone", "cant.teleport", "ColdRoom123", "archuserbtw"];
 
-
+    //Attempts to find the specified username 
+    //If found, compares the password in the same index to the one input
     function loginUser() {
         // console.log(user);
         // console.log(password);
@@ -68,6 +68,8 @@ function loginButton() {
                 }
             }
         }
+        //Attempts to find the specified email
+        //If found, compares the password in the same index to the one input
         for (let i = 0; i < emails.length; i++) {
             if (user == emails[i]) {
                 if (password == passwords[i]){
@@ -99,6 +101,7 @@ function checkPayment() {
     var cvvNumber = document.getElementById("cvv").value;
     var hasFailed = 0;
 
+    //Checks the length of the card 
     function checkCardNumber() {
         if(cardNumber.length != (16)){
             if(cardNumber.length != (15)){
@@ -107,6 +110,7 @@ function checkPayment() {
                 error(1);
             }
         }
+        //Checks to see if each character is a number
         for(let i = 0; i < cardNumber.length; i++) {
             let fails = 0;
             for(let j = 0; j < numbers.length; j++) {
@@ -120,6 +124,7 @@ function checkPayment() {
                 }
             }
         }
+        //Goes to check the date if nothing went wrong
         if(hasFailed == 0){
             checkDate();
         }
@@ -135,10 +140,13 @@ function checkPayment() {
         let curYear = date.getFullYear();
         let curMonth = date.getMonth() + 1;
 
+        //Checks inputted year against current, fails if lower than current year
         if(curYear > expYear) {
             console.log("failed year");
             hasFailed = 1;
             error(2);
+       
+        //If the year was the same, checks if the expirey month is greater than the current month
         } else if((curYear == expYear) && (curMonth > expMonth)) {
             console.log("failed month");
             hasFailed = 1;
@@ -148,6 +156,7 @@ function checkPayment() {
         }
     }   
 
+    //Checks the CVV, if a 15 digit card it should be 4 digits an if 16 it should be 3
     function checkCVV() {
         if(cvvNumber.length != (3 || 4)) {
             console.log("failed cvv length");
@@ -173,6 +182,7 @@ function checkPayment() {
         }
     }
 
+    //Funny error reporting
     function error(Error){
         if(Error == 1) {
             document.getElementById("incorrectText").innerHTML = "Invalid Card Number!";
@@ -183,6 +193,7 @@ function checkPayment() {
         }
     }
 
+    //checks the card number duh
     checkCardNumber();
 }
 
