@@ -14,6 +14,7 @@ function startTimer() {
 
 //Takes beginning of cookie (cname) and then returns the text that is after the name of the cookie, in other words the value of the cookie
 //Ex: getCookie(turnip) will look for a cookie that starts with "turnip", turnip=10, then will return the value of turnip, 10
+//yeah ok nerd 🤓
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
