@@ -14,7 +14,7 @@ function startTimer() {
 
 //Takes beginning of cookie (cname) and then returns the text that is after the name of the cookie, in other words the value of the cookie
 //Ex: getCookie(turnip) will look for a cookie that starts with "turnip", turnip=10, then will return the value of turnip, 10
-//yeah ok nerd 🤓
+//yeah ok nerd B)
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -96,7 +96,7 @@ function checkPayment() {
     // List of numbers to check if the credit card number has only numbers
     const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
     
-    //User payment details 😈
+    //User payment details >:)
     var cardNumber = document.getElementById("cardNumber").value;
     var dateNumber = document.getElementById("expireyDate").value;
     var cvvNumber = document.getElementById("cvv").value;
