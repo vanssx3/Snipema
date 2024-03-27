@@ -31,6 +31,7 @@ button {
   color: black;
   padding: 10px 24px;
   text-align: center;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', sans-serif;
   font-size: 250%;
   background-color: red;
   transition-duration: 0.2s;
