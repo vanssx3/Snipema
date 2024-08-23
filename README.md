@@ -1,5 +1,5 @@
 # Snipema
-"Web Scrapers are so... unisex." - PRNMB (creator of Free-Crack)
+"Web Scrapers are so... unisex." - Zachary Polansky 27 (creator of Free-Crack)
 
 Snipema is a functioning webscraper tool that, while running, watches https://vanssx3.github.io/Snipema for when Mr. York's autograph is available for purchase. When the program (snipema.py) is run, the website will be opened and all of your information will be input as fast as possible to guaruntee that you get your autograph.
 
