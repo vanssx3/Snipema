@@ -203,6 +203,11 @@ function backButton() {
     window.location.href = "accountPage.html";
 }
 
+//Back to home page
+function homeButton() {
+    window.location.href = "index.html";
+}
+
 //Determine if the user successfully purchased the autograph or not
 function judge() {
     let curTime = Math.floor(getCookie("timer"));
