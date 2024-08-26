@@ -51,3 +51,8 @@ img {
   font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', sans-serif;
   color: black;
 }
+
+#introText {
+  text-align: center;
+  font-size: 150%;
+}
